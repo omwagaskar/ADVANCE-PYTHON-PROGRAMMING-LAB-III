@@ -9,7 +9,7 @@ or admin@company.org.
 """
 
 # Step 3: Create a pattern to find email addresses
-pattern = r'[\w\.-]+@[\w\.-]+\.\w+'
+pattern = r'[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
 
 # Step 4: Find all email addresses in the text
 emails = re.findall(pattern, text)
@@ -18,5 +18,7 @@ emails = re.findall(pattern, text)
 print("Email addresses found:")
 
 # Step 5: Display the extracted email addresses
+for email in emails:
+  print(email)
 for email in emails:
   print(email)
